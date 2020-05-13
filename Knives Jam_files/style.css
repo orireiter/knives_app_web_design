@@ -1,0 +1,597 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(MaterialIcons-Regular.woff) format('woff');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  cursor: pointer;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+@font-face {
+    font-family: "RealBook";
+    src: url('realbook-webfont.ttf');
+}
+.realbook {
+    font-family: "RealBook", sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #fbf5eb;
+    background-image: url("table.jpg");
+    background-repeat: repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.main {
+    overflow: hidden; /* will contain if #first is longer than #second */
+    max-width: 100%;
+    height: 98%;
+}
+
+
+/* --------------------------portrait mode-------------------------------- */
+
+/* --------------------------Left Page starts here------------------------ */
+
+.fulldiv {
+    direction: rtl;
+    
+    background-color: white;
+    width: 95%;
+    max-width: 95%;
+    
+    padding: 1%;
+    height: 97%;
+    overflow: auto;
+    float: left;
+    position: fixed;
+
+    background-image: url("coffee-stain.jpeg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-attachment: local;
+    transform: translate(0,1%);
+    z-index: 2;
+}
+
+.xbutton {
+    
+}
+
+#logo {
+    text-align: center; 
+    margin-bottom: 5%; 
+    margin-top: 5%;
+}
+
+#search {
+    direction: ltr;
+    height: 10%;
+    text-align: center;
+}
+
+#search input {
+    border-style: none;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 33.333%;
+    transform: translate(0,100%);
+    width: 25%;
+    background-color: rgba(175, 175, 175, 0.664);
+    border-radius: 1em;
+    font-family: 'Courier New', Courier, monospace;
+}
+#search input:focus {
+    background-color: grey;
+}
+
+.toprow {
+    overflow: hidden;
+    height: 5%;
+}
+.toprow .adder {
+    float: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+.newsong:hover {
+    cursor: pointer;
+    color: #7f5c52;
+}
+.toprow .cloud {
+    padding-right: 5%;
+    float: right;
+    overflow: hidden;
+}
+.cloud span {
+    cursor: pointer;
+    display: inline-block;
+    width: 40%;
+    margin-left: 5%;
+}
+
+
+.libsongcontainer {
+    overflow: hidden;
+    cursor: pointer;
+    /* line-height: 70px; */
+    background-image: url("empy_staff_songNames.jpg");
+    background-repeat: repeat-x;
+    background-size: auto;
+    padding-bottom: 4%;
+    width: 100%;
+    font-family: "RealBook", sans-serif;
+    margin-bottom: 4%;
+    z-index: 10;
+    height: 200%;
+    max-height: 100%;
+}
+.libsongcontainer div {
+    height: 100%;
+    max-height: 100%;
+    
+}
+
+.left {
+    width: 100%;
+    float: left;
+    /* transform: translate(50%); */
+    text-overflow: ellipsis;
+    overflow: visible;
+    text-align: center;
+    font-size: 2.5em;
+    text-decoration: underline;
+    line-height: 120%;
+    height: 100%;
+}
+.right {
+    float: right;
+    height: 100%;
+    font-size: 1.1em;
+    transform: translate(0,42%);
+}
+
+
+
+/* ----------------------Right Page starts here----------------------------------- */
+
+
+.player {
+    background-color: white;
+    padding: 1%;
+    height: 100%;
+    overflow: auto;
+    float: left;
+    width: 95%;
+    position: fixed;
+    max-width: 95%;
+    max-height: 97% ;
+    font-family: "RealBook";
+    transform: translate(0,1%);
+    z-index: 3;
+}
+
+.opening {
+    margin-top: 10%;
+    margin-bottom: 8%;
+    line-height: 200%;
+}
+.titleplayer {
+    text-align: center;
+    font-size: 4em;
+    font-family: "RealBook", 'Courier New', Courier;
+    text-decoration: underline;
+}
+.metaplayer {
+    overflow: hidden;
+}
+.styleplayer {
+    float: left;
+    overflow: hidden;
+    font-family: "RealBook",'Courier New', Courier;
+}
+.composerplayer {
+    float: right;
+    overflow: hidden;
+    font-family: "RealBook",'Courier New', Courier;
+}
+
+
+.editting {
+    margin-bottom: 3%;
+}
+.transposing {
+    font-size: 1em;
+    margin-bottom: 2%;
+}
+.transposition {
+    margin: 0px;
+}
+.transposing button {
+    height: 95%;
+    border-radius: 0.1em;
+    background-color: white;
+    border-color: black;
+    border-width: thin;
+}
+
+
+.button {
+    cursor: pointer;
+    user-select: none;
+}
+
+.button .material-icons {
+    font-size: 1.7em;
+}
+
+.editbtn {
+    text-align: right;
+}
+
+.harmony {
+    border-bottom: double thick;
+    border-top: double thick;
+    margin-bottom: 5%;
+    padding-top: 5%;
+    
+}
+.gridline {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    font-size: 1.5em;
+    padding-bottom: 5%;
+    
+}
+
+
+.volume {
+    font-size: 1em;
+    padding-top: 2% ;
+}
+
+.deletebtn {
+    float: right;
+    transform: translate(0, -200%);
+}
+.deletebtn span{
+    transform: translate(0, -200%);
+}
+
+
+
+.boxeditor {
+    border: 1px solid #999999;
+    padding: 5px;
+}
+
+.boxeditor:hover {
+    border-color: red;
+}
+
+
+/* _____________ middle - binder ______________________ */
+
+.binder {
+    float: right;
+    height: 100%;
+    width: 11%;
+    max-width: 11%;
+    transform: translate(50%,1%);
+    z-index: 1;
+    background-image: url(binding_mobile.png);
+}
+
+.binder img {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+/* ---------------------------- landscape mode ------------------------------- */
+@media only screen and (orientation: landscape) {
+    .xbutton {
+        display: none;
+    }
+    .fulldiv {
+        direction: rtl;
+        
+        background-color: white;
+        width: 45%;
+        max-width: 45%;
+        
+        padding: 1%;
+        height: 97%;
+        overflow: auto;
+        float: left;
+        position: fixed;
+    
+        background-image: url("coffee-stain.jpeg");
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-attachment: local;
+        transform: translate(0,1%);
+    }
+    
+    #logo {
+        text-align: center; 
+        margin-bottom: 5%; 
+        margin-top: 5%;
+    }
+    
+    #search {
+        direction: ltr;
+        height: 10%;
+        text-align: center;
+    }
+    
+    #search input {
+        border-style: none;
+        padding-left: 2%;
+        padding-right: 2%;
+        height: 33.333%;
+        transform: translate(0,100%);
+        width: 25%;
+        background-color: rgba(175, 175, 175, 0.664);
+        border-radius: 1em;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    #search input:focus {
+        background-color: grey;
+    }
+    
+    .toprow {
+        overflow: hidden;
+        height: 5%;
+        padding-bottom: 10%;
+    }
+    .toprow .adder {
+        float: left;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-align: center;
+        font-size: 1.2em;
+        font-family: 'Courier New', Courier, monospace;
+        
+    }
+    .newsong:hover {
+        cursor: pointer;
+        color: #7f5c52;
+    }
+    .toprow .cloud {
+        padding-right: 5%;
+        float: right;
+        overflow: hidden;
+    }
+    .cloud span {
+        cursor: pointer;
+        display: inline-block;
+        width: 40%;
+        margin-left: 5%;
+    }
+    
+    
+    .libsongcontainer {
+        overflow: hidden;
+        cursor: pointer;
+        /* line-height: 70px; */
+        background-image: url("empy_staff_songNames.jpg");
+        background-repeat: repeat-x;
+        background-size: auto;
+        padding-bottom: 4%;
+        width: 100%;
+        font-family: "RealBook", sans-serif;
+        margin-bottom: 4%;
+        z-index: 10;
+        height: 200%;
+        max-height: 100%;
+    }
+    .libsongcontainer div {
+        height: 100%;
+        max-height: 100%;
+        
+    }
+    
+    .left {
+        width: 100%;
+        float: left;
+        /* transform: translate(50%); */
+        text-overflow: ellipsis;
+        overflow: visible;
+        text-align: center;
+        font-size: 2.5em;
+        text-decoration: underline;
+        line-height: 120%;
+        height: 100%;
+    }
+    .right {
+        float: right;
+        height: 100%;
+        font-size: 1.1em;
+        transform: translate(0,42%);
+    }
+    
+    
+    
+    /* ----------------------Right Page starts here----------------------------------- */
+    
+    
+    .player {
+        background-color: white;
+        padding: 1%;
+        height: 100%;
+        overflow: auto;
+        float: right;
+        position: sticky;
+        width: 45%;
+        max-width: 45%;
+        max-height: 100% ;
+        font-family: "RealBook";
+        transform: translate(0,1%);
+        
+    }
+    
+    .opening {
+        margin-top: 8%;
+        margin-bottom: 8%;
+        line-height: 200%;
+    }
+    .titleplayer {
+        text-align: center;
+        font-size: 4em;
+        font-family: "RealBook", 'Courier New', Courier;
+        text-decoration: underline;
+    }
+    .metaplayer {
+        overflow: hidden;
+    }
+    .styleplayer {
+        float: left;
+        overflow: hidden;
+        font-family: "RealBook",'Courier New', Courier;
+    }
+    .composerplayer {
+        float: right;
+        overflow: hidden;
+        font-family: "RealBook",'Courier New', Courier;
+    }
+    
+    
+    .editting {
+        margin-bottom: 3%;
+    }
+    .transposing {
+        font-size: 1.3em;
+        margin-bottom: 2%;
+    }
+    .transposition {
+        margin: 0px;
+    }
+    .transposing button {
+        height: 95%;
+        border-radius: 0.1em;
+        background-color: white;
+        border-color: black;
+        border-width: thin;
+    }
+    
+    
+    .button {
+        cursor: pointer;
+        user-select: none;
+    }
+    
+    .button .material-icons {
+        font-size: 1.7em;
+    }
+    
+    .editbtn {
+        text-align: right;
+    }
+    
+    .harmony {
+        border-bottom: double thick;
+        border-top: double thick;
+        margin-bottom: 5%;
+        padding-top: 5%;
+    }
+    .gridline {
+        width: 100%;
+        height: 100%;
+        user-select: none;
+        font-size: 1.5em;
+        padding-bottom: 5%;
+        
+    }
+    
+    
+    .volume {
+        font-size: 1em;
+    }
+    
+    .deletebtn {
+        float: right;
+        transform: translate(0, -200%);
+    }
+    .deletebtn span{
+        transform: translate(0, -200%);
+    }
+    
+    
+    
+    .boxeditor {
+        border: 1px solid #999999;
+        padding: 5px;
+    }
+    
+    .boxeditor:hover {
+        border-color: red;
+    }
+    
+    
+    /* _____________ middle - binder ______________________ */
+    
+    .binder {
+        float: right;
+        height: 100%;
+        width: 10%;
+        max-width: 10%;
+        transform: translate(0,1%);
+        background-image: url(binding_desktop.png);
+        background-size: 100% 100%;
+        background-repeat: repeat-y;
+    }
+    
+    .binder img {
+        height: 100%;
+        width: 100%;
+    }
+  }

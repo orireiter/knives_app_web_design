@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="manifest" href="https://priceless-blackwell-3800f5.netlify.app/manifest.webmanifest">
+        <link rel="stylesheet" type="text/css" href="Knives%20Jam_files/style.css">
+        <title>Knives Jam</title>
+        <link rel="stylesheet" href="Knives%20Jam_files/w3.css">
+        <link rel="icon" href="https://priceless-blackwell-3800f5.netlify.app/knivesjam_logo.svg">
+    </head>
+    <body>
+
+        <div class="fulldiv"><div class="realbook content"><p><span class="button"><i class="material-icons" title="Library">menu</i></span></p><h1 class="realbook titleplayer">Blue in Green</h1><div class="metaplayer"><h3 class="realbook styleplayer">Bop</h3><h2 class="realbook composerplayer">Bill Evans</h2></div><div style="line-height: 1;"><p class="transposition">Playback key: +0 semitones,<button>+</button><button>-</button></p><p class="transposition">Display key: +0 semitones (C instruments)<button>+</button><button>-</button></p></div><span class="button"><i class="material-icons" title="Play">play_arrow</i></span><span class="button"><i class="material-icons" title="Start over">replay</i></span><input type="range" min="30" max="300" step="1" value="106"> 106 BPM<p style="text-align: right;"><span class="button"><i class="material-icons" title="Edit song">edit</i></span></p><div><div class="gridline"><div style="width: 25%; margin-top: auto; display: inline-block; color: red;">G-7</div><div style="width: 25%; margin-top: auto; display: inline-block; color: black;">A7alt</div><div style="width: 12.5%; margin-top: auto; display: inline-block; color: black;">D-7</div><div style="width: 12.5%; margin-top: auto; display: inline-block; color: black;">Dь7</div><div style="width: 12.5%; margin-top: auto; display: inline-block; color: black;">C-7</div><div style="width: 12.5%; margin-top: auto; display: inline-block; color: black;">F7ь9</div></div><div class="gridline"><div style="width: 25%; margin-top: auto; display: inline-block; color: black;">Bь∆</div><div style="width: 25%; margin-top: auto; display: inline-block; color: black;">A7alt</div><div style="width: 25%; margin-top: auto; display: inline-block; color: black;">D-7</div><div style="width: 25%; margin-top: auto; display: inline-block; color: black;">E7alt</div></div><div class="gridline"><div style="width: 25%; margin-top: auto; display: inline-block; color: black;">A-7</div><div style="width: 25%; margin-top: auto; display: inline-block; color: black;">D-7</div></div></div><div><p><input type="range" min="0" max="100" step="1" value="100">piano : 100</p><p><input type="range" min="0" max="100" step="1" value="100">bass : 100</p><p><input type="range" min="0" max="100" step="1" value="100">drums : 100</p></div><span class="button"><i class="material-icons" title="Delete song from local library">delete</i></span></div></div>
+    
+<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+      .then(function(registration) {
+        console.log('Registered:', registration);
+      })
+      .catch(function(error) {
+        console.log('Registration failed: ', error);
+      });
+    }
+</script>
+
+<script src="Knives%20Jam_files/immutable.js"></script>
+<script src="Knives%20Jam_files/instrument.js"></script>
+<script src="Knives%20Jam_files/elm.js"></script>
+<script src="Knives%20Jam_files/dexie.js"></script>
+<script src="Knives%20Jam_files/librarydb.js"></script>
+<script src="Knives%20Jam_files/tune2.js"></script>
+<script>
+    const app = Elm.Main.init({
+        node: document.getElementById("elm")
+    });
+
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const instruments = { bass: bassBufInstrument(ctx)
+                        , drums: drumsBufInstrument(ctx)
+                        , piano: pianoBufInstrument(ctx) };
+    initDixie(app);
+    initTune(ctx, instruments, app);
+
+</script>
+</body></html>
